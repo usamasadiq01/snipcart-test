@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exact Solution Electronics — Snipcart Test Store</title>
+  <link rel="preconnect" href="https://app.snipcart.com">
+  <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+  <style>
+    body { font-family: -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background: #f5f6f8; color: #1f2937; }
+    header { background: #1f4e79; color: #fff; padding: 24px 32px; }
+    header h1 { margin: 0; font-size: 22px; }
+    header p { margin: 4px 0 0; opacity: .8; font-size: 14px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; padding: 32px; max-width: 900px; margin: 0 auto; }
+    .card { background: #fff; border-radius: 10px; padding: 20px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+    .card h2 { font-size: 17px; margin: 0 0 6px; }
+    .card .price { font-weight: 700; color: #1f4e79; margin-bottom: 12px; }
+    .card p { font-size: 13px; color: #6b7280; }
+    button.snipcart-add-item { background: #1f4e79; color: #fff; border: 0; border-radius: 6px; padding: 10px 16px; font-size: 14px; cursor: pointer; }
+    button.snipcart-add-item:hover { background: #163a5c; }
+    .cart-btn { position: fixed; top: 18px; right: 24px; background: #fff; color: #1f4e79; border: 0; border-radius: 6px; padding: 8px 14px; font-weight: 600; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Exact Solution Electronics — Snipcart Test Store</h1>
+    <p>ExactFlow integration R&amp;D — test mode</p>
+    <button class="cart-btn snipcart-checkout">🛒 Cart (<span class="snipcart-items-count">0</span>)</button>
+  </header>
+
+  <div class="grid">
+    <div class="card">
+      <h2>ExactFlow Test Widget</h2>
+      <div class="price">49.00 PLN</div>
+      <p>Physical test product for order + fulfillment round.</p>
+      <button class="snipcart-add-item"
+        data-item-id="EXF-WIDGET-001"
+        data-item-name="ExactFlow Test Widget"
+        data-item-price="49.00"
+        data-item-url="/"
+        data-item-description="Physical test product for ExactFlow integration"
+        data-item-quantity="1"
+        data-item-max-quantity="10">
+        Add to cart
+      </button>
+    </div>
+
+    <div class="card">
+      <h2>ExactFlow Test Gadget</h2>
+      <div class="price">99.00 PLN</div>
+      <p>Second product for multi-item order testing.</p>
+      <button class="snipcart-add-item"
+        data-item-id="EXF-GADGET-002"
+        data-item-name="ExactFlow Test Gadget"
+        data-item-price="99.00"
+        data-item-url="/"
+        data-item-description="Second physical test product"
+        data-item-quantity="1"
+        data-item-max-quantity="10">
+        Add to cart
+      </button>
+    </div>
+  </div>
+
+  <script>
+    window.SnipcartSettings = {
+      publicApiKey: 'OTZiZDg2MzktNzUyMy00YTA1LWI3YmMtNWYxOGEyZjJmNTI2NjM5MTkwMDc1NTQyNjY0NjAy',
+      loadStrategy: 'on-user-interaction',
+      currency: 'pln'
+    };
+    (()=>{var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var f=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,m=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(m.forEach(t=>document.addEventListener(t,o)),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;let t=document.getElementsByTagName("head")[0],n=document.querySelector("#snipcart"),i=document.querySelector('src[src^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][src$="snipcart.js"]')),e=document.querySelector('link[href^="'.concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,'"][href$="snipcart.css"]'));n||(n=document.createElement("div"),n.id="snipcart",n.setAttribute("hidden","true"),document.body.appendChild(n)),v(n),i||(i=document.createElement("script"),i.src="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.js"),i.async=!0,t.appendChild(i)),e||(e=document.createElement("link"),e.rel="stylesheet",e.type="text/css",e.href="".concat(window.SnipcartSettings.protocol,"://").concat(window.SnipcartSettings.domain,"/themes/v").concat(window.SnipcartSettings.version,"/default/snipcart.css"),t.prepend(e)),f&&(n.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(n.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(n.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(n.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(n.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}function v(t){!f||(t.dataset.apiKey=window.SnipcartSettings.publicApiKey,window.SnipcartSettings.addProductBehavior&&(t.dataset.configAddProductBehavior=window.SnipcartSettings.addProductBehavior),window.SnipcartSettings.modalStyle&&(t.dataset.configModalStyle=window.SnipcartSettings.modalStyle),window.SnipcartSettings.currency&&(t.dataset.currency=window.SnipcartSettings.currency),window.SnipcartSettings.templatesUrl&&(t.dataset.templatesUrl=window.SnipcartSettings.templatesUrl))}})();
+  </script>
+</body>
+</html>
